@@ -1,5 +1,4 @@
-import json
-
+# Ben Stobaugh
 
 # Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s),
 # which deserializes the string back into the tree.
@@ -77,7 +76,5 @@ def deserialize(curstr, curroot=None, left=False):
 
 if __name__ == "__main__":
     node = Node('root', Node('left', Node('left.left')), Node('right'))
-
-    print(serialize(node))
-    print(deserialize(serialize(node)).left.left.val == 'left.left')
-    print(deserialize(serialize(node)).right.val == 'right')
+    assert deserialize(serialize(node)).left.left.val == 'left.left'
+    assert deserialize(serialize(node)).right.val == 'right'
