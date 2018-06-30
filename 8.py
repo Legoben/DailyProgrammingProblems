@@ -35,9 +35,7 @@ def num_unival(node, above = None):
         above.add(node.val)
         return 1
 
-    num = 0
-
-    num += num_unival(node.left, below)
+    num = num_unival(node.left, below)
     num += num_unival(node.right, below)
 
     if len(below) == 1 and node.val in below:
