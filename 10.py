@@ -41,4 +41,3 @@ if __name__ == "__main__":
 
     run_scheduler() # In theory, this could be run in diff thread
     pass
-
