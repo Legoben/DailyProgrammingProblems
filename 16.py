@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     for i in range(40):
         print(i)
-        l.record(i)
+        l.record(chr(i + 30))
         print(l.cur_start)
         if i >= 5:
             print(l.get_last(2))
